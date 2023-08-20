@@ -1,0 +1,9 @@
+                                                                                        MODULE: 1 (SDLC)
+____________________________________________________________________________________________________
+
+1)  What is software? What is software engineering?
+ANS : software : software is a set of program used to execute specific task.
+          software engineering : software engineering is the process of designing , developing , testing and maintaining software.
+
+2) Explain types of software?
+ANS :
