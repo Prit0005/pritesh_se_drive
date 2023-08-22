@@ -1,9 +1,17 @@
                                                                                         MODULE: 1 (SDLC)
-____________________________________________________________________________________________________
+‬‍
 
 1)  What is software? What is software engineering?
-ANS : software : software is a set of program used to execute specific task.
-          software engineering : software engineering is the process of designing , developing , testing and maintaining software.
+ANS : software : software is a set of program , set of instructions  used to execute specific task or functions.
+                       > in other words software, instructions that tell a computer what to do.
+                       > commonly refer to applications.
+                       >  two types of software :application software , system software.
 
+          software engineering : software engineering is the process of designing , developing , testing and maintaining software.
+                                          > it is a systematic and disciplined approach to software development that aims to create high quality ,reliable 
+                                             and maintainable software .
+                                          >software engineering includes variety of techniques , tools and including requirements analysis , design , testing 
+                                            and maintenance 
+                                   
 2) Explain types of software?
-ANS :
+ANS :application software :
