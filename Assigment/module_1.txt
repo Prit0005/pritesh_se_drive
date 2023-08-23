@@ -1,5 +1,5 @@
                                                                                         MODULE: 1 (SDLC)
-‬‍
+
 
 1)  What is software? What is software engineering?
 ANS : software : software is a set of program , set of instructions  used to execute specific task or functions.
