@@ -1,7 +1,6 @@
 /* Write a program to make Simple calculator (to make addition, subtraction, 
 multiplication, division and modulo)  */
 #include<stdio.h>
-#include <math.h>
 void main(){
     int a,b;
     printf("Enter two numbers: ");
