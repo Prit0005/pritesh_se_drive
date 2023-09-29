@@ -1,9 +1,9 @@
- //WAP to swap two numbers without using third variable
-
+// WAP to swap two numbers without using third variable
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int num1, num2;
 
     printf("Enter two numbers:\n");
