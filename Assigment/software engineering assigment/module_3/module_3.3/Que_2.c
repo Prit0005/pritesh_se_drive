@@ -1,23 +1,19 @@
 /* WAP of Addition, Subtraction, Multiplication and Division using Switch 
 case.(Must Be Menu Driven) */
 #include <stdio.h>
-
 int main() {
     int choice;
     double num1, num2, result;
 
-    printf("Menu:\n");
-    printf("1. Addition\n");
-    printf("2. Subtraction\n");
-    printf("3. Multiplication\n");
-    printf("4. Division\n");
+    printf("Menu:\n,1. Addition\n,2. Subtraction\n,3. Multiplication\n,4. Division\n");
     printf("Enter your choice (1/2/3/4): ");
     scanf("%d", &choice);
 
     switch (choice) {
         case 1:
-            printf("Enter two numbers to add: ");
-            scanf("%lf %lf", &num1, &num2);
+          
+             printf("Enter two numbers to add: ");
+            scanf("%.lf %.lf", &num1, &num2);
             result = num1 + num2;
             printf("Result: %.2lf\n", result);
             break;
