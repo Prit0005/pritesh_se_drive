@@ -1,108 +1,127 @@
 #include <iostream>
 #include <ctime>
-
-class ATM {
+using namespace std;
+class ATM
+{
 private:
     int pin;
     double initialBalance;
-    double currentBalance;
 
 public:
-    ATM() {
+    ATM()
+    {
         pin = 12345;
         initialBalance = 60000.0;
-        currentBalance = 20000.0;
     }
-
-    void displayWelcomeScreen() {
-        time_t currentTime = time(0);
-        tm* now = localtime(&currentTime);
-
-        std::cout << "Welcome to the ATM" << std::endl;
-        std::cout << "Current Date and Time: " << now->tm_year + 1900 << "-"
-                  << now->tm_mon + 1 << "-" << now->tm_mday << " "
-                  << now->tm_hour << ":" << now->tm_min << ":" << now->tm_sec << std::endl;
-        std::cout << "1. Enter ATM PIN" << std::endl;
-        std::cout << "2. Help" << std::endl;
-    }
-
-    void displayHelpScreen() {
-        std::cout << "Help Screen" << std::endl;
-        // Add help instructions here
-    }
-
-    void enterPIN() {
-        int enteredPin;
-        std::cout << "Enter ATM PIN: ";
-        std::cin >> enteredPin;
-
-        if (enteredPin == pin) {
-            displayMenuScreen();
-        } else {
-            std::cout << "Incorrect PIN. Exiting..." << std::endl;
-        }
-    }
-
-    void displayMenuScreen() {
+    void welcome()
+    {
         int choice;
-        while (true) {
-            std::cout << "Menu:" << std::endl;
-            std::cout << "1. Deposit" << std::endl;
-            std::cout << "2. Check Balance" << std::endl;
-            std::cout << "3. Exit" << std::endl;
-            std::cout << "Enter your choice: ";
-            std::cin >> choice;
-
-            switch (choice) {
-                case 1:
-                    deposit();
-                    break;
-                case 2:
-                    checkBalance();
-                    break;
-                case 3:
-                    return;
-                default:
-                    std::cout << "Invalid choice. Try again." << std::endl;
-            }
+        cout << "---------------------------welcome to ATM--------------------------" << endl;
+        time_t currenttime = time(0);
+        cout << "current time is :" << ctime(&currenttime) << endl;
+        cout << "press 1 and then press enter to access your account via pin number" << endl
+             << "or" << endl
+             << "Press 0 and press enter to get:" << endl;
+        cin >> choice;
+        if (choice == 1)
+        {
+            cout << "ATM account access" << endl;
+            cout << "enter your pin to access :[only one pin to access] " << endl;
+        }
+        else if (choice == 0)
+        {
+            cout << "ATM account status" << endl;
+            cout << "you must have the currect pin number to access this account . see your bank representative for assistance during bank opening hours thanks for ,your choice today ";
         }
     }
-
-    void deposit() {
-        double amount;
-        std::cout << "Enter the amount to deposit: Rs. ";
-        std::cin >> amount;
-        if (amount > 0) {
-            currentBalance += amount;
-            std::cout << "Deposit successful. New balance: Rs. " << currentBalance << std::endl;
-        } else {
-            std::cout << "Invalid amount. Please enter a positive amount." << std::endl;
+    void pinnumber()
+    {
+        int pin=12345;
+        int p;
+        cin >> p;
+        if (p != pin)
+        {
+            cout << "THANK YOU";
+            cout << "you head made your attempts which failed!! no more attempts allowed!! SORRY";
+        }
+        else
+        {
+            menu();
+            
         }
     }
-
-    void checkBalance() {
-        std::cout << "Current balance: Rs. " << currentBalance << std::endl;
+    void menu()
+    {
+        int select;
+        cout << "ATM main menu screen" << endl;
+        cout << "Enter 1 to deposit cash:\nEnter 2 to withdraw cash:\nEnter 3 to balance inquiry:\nenter 0 to exit atm:" << endl
+             << endl;
+        cout << "PLEASE ENTER A SELECTION AND PRESS RETURN KEY" << endl;
+        cin >> select;
+        switch (select)
+        {
+        case 1:
+        {
+            deposite();
+            break;
+        }
+        case 2:
+        {
+            withdraw();
+            break;
+        }
+        case 3:
+        {
+            inquiry();
+        }
+        case 0:
+        {
+            cout << "exit";
+        }
+        }
+    }
+    void deposite()
+    {
+        double depositAmount;
+        cout << "name of account holder:pritesh patel\n";
+        cout << "account holder address is :ahmedabad\n";
+        cout << "branch location is :ahmedabad\n";
+        cout << "account number :987654\n";
+        cout << "available blance :"<<initialBalance<<endl;
+        cout << "Enter the amount to deposit: Rs. ";
+        cin >> depositAmount;
+        initialBalance += depositAmount;
+        cout << "Deposit successful. Updated balance: Rs. " << initialBalance << "\n";
+         cout << "Your account balance: Rs. " << initialBalance << "\n";
+    }
+    void withdraw()
+    {
+        double withdrawalAmount;
+        cout << "name of account holder:pritesh patel\n";
+        cout << "account holder address is :ahmedabad\n";
+        cout << "branch location is :ahmedabad\n";
+        cout << "account number :987654\n";
+        cout << "Enter the amount to withdraw: Rs. ";
+        cin >> withdrawalAmount;
+        if (withdrawalAmount > initialBalance)
+        {
+            cout << "Insufficient funds. Withdrawal unsuccessful.\n";
+        }
+        else
+        {
+            initialBalance -= withdrawalAmount;
+            cout << "Withdrawal successful. Updated balance: Rs. " << initialBalance << "\n";
+        }
+    }
+    void inquiry()
+    {
+        cout << "Your account balance: Rs. " << initialBalance << "\n";
     }
 };
-
-int main() {
-    ATM atm;
-    atm.displayWelcomeScreen();
-    int choice;
-    std::cout << "Enter your choice: ";
-    std::cin >> choice;
-
-    switch (choice) {
-        case 1:
-            atm.enterPIN();
-            break;
-        case 2:
-            atm.displayHelpScreen();
-            break;
-        default:
-            std::cout << "Invalid choice. Exiting..." << std::endl;
-            break;
-    }
-
+int main()
+{
+    ATM a;
+    a.welcome();
+    a.pinnumber();
     return 0;
 }
