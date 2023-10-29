@@ -36,7 +36,6 @@ public:
     }
     void pinnumber()
     {
-        int pin=12345;
         int p;
         cin >> p;
         if (p != pin)
@@ -123,5 +122,6 @@ int main()
     ATM a;
     a.welcome();
     a.pinnumber();
+    a.menu();
     return 0;
 }

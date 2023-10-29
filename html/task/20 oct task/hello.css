@@ -1,0 +1,23 @@
+.mainbox{
+    border: 2px solid red;
+}
+
+.box{
+    margin: 10px;
+    padding: 10px;
+    background-color: purple;
+}
+p::selection{
+    background-color: black;
+    color: green;
+}
+p::after{
+    content: " Hello";
+}
+p::first-line{
+    color: white;
+}
+p::first-letter{
+    font-size: 24px;
+}
+

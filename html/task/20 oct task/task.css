@@ -1,0 +1,106 @@
+.main {
+    background-color: white;
+    width: 100%;
+}
+
+.b1 {
+    width: 60%;
+    border: 2px solid aqua;
+    height: 100px;
+    margin: 20px;
+}
+
+.b2 {
+    width: 60%;
+    border: 2px solid aqua;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+}
+
+.b3 {
+    width: 60%;
+    border: 2px solid aqua;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.b4 {
+    width: 60%;
+    border: 2px solid aqua;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.b5 {
+    width: 60%;
+    border: 2px solid aqua;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.b6 {
+    width: 60%;
+    border: 2px solid aqua;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.b7 {
+    width: 60%;
+    border: 2px solid aqua;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.b22,
+.b32,
+.b42,
+.b52,
+.b62,
+.b72 {
+    border: 2px solid lightpink;
+    height: 80px;
+    width: 80px;
+    margin: 8px;
+    background-color: lightpink;
+}
+
+.b23,
+.b33,
+.b43,
+.b53,
+.b63,
+.b73 {
+    border: 2px solid plum;
+    height: 80px;
+    width: 80px;
+    margin: 8px;
+    background-color: plum;
+}
+
+.b24,
+.b34,
+.b44,
+.b54,
+.b64,
+.b74 {
+    border: 2px solid yellow;
+    height: 80px;
+    width: 80px;
+    margin: 8px;
+    background-color: yellow;
+}

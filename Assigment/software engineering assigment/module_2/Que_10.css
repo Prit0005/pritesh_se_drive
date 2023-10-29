@@ -1,0 +1,157 @@
+h1 {
+    width: 100%;
+    color: red;
+    background-image: linear-gradient(aqua, plum, cornflowerblue);
+    text-align: center;
+}
+
+section {
+    width: 100%;
+    background-color: hsl(180, 100%, 50%, 0.2);
+}
+
+.container {
+    width: 100%;
+    margin-left: 10px;
+}
+
+h2 {
+    color: red;
+    padding-top: 30px;
+}
+
+.user1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.user label {
+    width: 100px;
+    text-align: right;
+    
+    color: blue;
+}
+.user input{
+    border-color: blue;
+}
+.user2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personal{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    position: relative;
+    right: 400px;
+}
+
+.personal label {
+    width: 100px;
+    text-align: right;
+  
+    color: blue;
+}
+.personal input{
+    border-color: blue;
+}
+.personal1{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    position: absolute;
+    left: 900px;
+    bottom: 140px;
+}
+
+.personal1 label {
+    width: 100px;
+    text-align: right; 
+    color: blue;
+}
+.personal1 input{
+    border-color: blue;
+}
+#a{
+    margin-bottom: 185px;
+}
+#b{
+    margin-bottom: 150px;
+}
+#c{
+    margin-bottom: 120px;
+}
+#d{
+    margin-bottom: 75px;
+}
+.user3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    position: relative;
+    right: 400px;
+}
+
+.account label {
+    width: 100px;
+    text-align: right;
+  
+    color: blue;
+}
+.account input{
+    border-color: blue;
+    height: 30px;
+}
+.account1{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    position: absolute;
+    left: 900px;
+    bottom: 90px;
+}
+.account1 label {
+    width: 100px;
+    text-align: right; 
+    color: blue;
+}
+.account1 input{
+    border-color: blue;
+}
+p{
+    color: blue;
+    font-size: x-large;
+}
+.button{
+    text-align: center;
+}
+.button button{
+    border-color: black;
+    background-color: blue;
+    color: white;
+}
+
+
