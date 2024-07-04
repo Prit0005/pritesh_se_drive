@@ -1,0 +1,66 @@
+1)Create a Bank table, attributes are : branch id, branch name, branch city
+--------------------------------------------------------------------------
+ANS: CREATE TABLE Bank (
+    branch_id INT PRIMARY KEY,
+    branch_name VARCHAR(100),
+    branch_city VARCHAR(100)
+	);
+
+2)Create a Loan table, attributes are : loan no, branch id, account holder’s id, loan amount and loan type 
+----------------------------------------------------------------------------
+ANS: CREATE TABLE Loan (
+    	loan_no INT PRIMARY KEY,
+    	branch_id INT,
+    	account_holder_id INT,
+    	loan_amount DECIMAL(10, 2),
+    	loan_type VARCHAR(50),
+    	FOREIGN KEY (branch_id) REFERENCES Bank(branch_id),
+    	FOREIGN KEY (account_holder_id) REFERENCES 	AccountHolder(account_holder_id)
+	);
+
+3)Create a table named as Account holder for the same scenario containing the attributes are account holder’s id, account no, account holder’s name,
+city,contact, date of account created, account status (active or terminated),account type and balance
+---------------------------------------------------------------------------
+ANS:CREATE TABLE AccountHolder (
+    	account_holder_id INT PRIMARY KEY,
+    	account_no VARCHAR(20),
+    	account_holder_name VARCHAR(100),
+    	city VARCHAR(100),
+    	contact VARCHAR(15),
+    	date_of_account_created DATE,
+    	account_status VARCHAR(20),
+    	account_type VARCHAR(20),
+    	balance DECIMAL(10, 2)
+		);
+
+4)Also fetch the details of the account holder who are related from the same
+city 
+----------------------------------------------------------------------------ANS:SELECT account_holder_id, account_holder_name, city
+	FROM AccountHolder AS a1
+	WHERE EXISTS (
+    SELECT 1
+    FROM AccountHolder AS a2
+    WHERE a1.city = a2.city
+    AND a1.account_holder_id != a2.account_holder_id
+);
+
+5)Write a query to fetch account number and account holder name, whose
+accounts were created after 15th of any month
+---------------------------------------------------------------------------
+ANS:SELECT account_no, account_holder_name
+	FROM AccountHolder
+	WHERE DAY(date_of_account_created) > 15;
+
+6)Write a query to display the city name and count the branches in that city.Give the count of branches an alias name of Count_Branch
+---------------------------------------------------------------------------
+ANS:SELECT branch_city AS city, COUNT(branch_id) AS Count_Branch
+	FROM Bank
+	GROUP BY branch_city;
+
+7)Write a query to display the account holder’s id, account holder’s name,
+branch id, and loan amount for people who have taken loans. (NOTE : use
+sql join concept to solve the query)
+--------------------------------------------------------------------------
+ANS:SELECT ah.account_holder_id, ah.account_holder_name, l.branch_id, l.loan_amount
+FROM AccountHolder ah
+JOIN Loan l ON ah.account_holder_id = l.account_holder_id;	
